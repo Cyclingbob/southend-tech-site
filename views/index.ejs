@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/styles.css">
+    <link rel="stylesheet" href="/public/fontawesome.css" crossorigin="anonymous"></script>
+    <title>Southend Tech</title>
+</head>
+<body>
+    <div class="topnav-container">
+        <div class="topnav responsive" id="myTopnav">
+            <a href="/">Home</a>
+            <a href="/events">Events</a>
+            <a href="/blogs">Blogs</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="expand()">&#9776;</a>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="text-bubble">
+            <h1 class="img_centered" style="color:white">Southend Tech</h1>
+        </div>
+        <img src="/public/20250807_190950.jpg">
+        <div class="event-box">
+            <h2>The next event is the <%= next_events[0].name %> on <%= next_events[0].readable_date %>!</h2>
+        </div>
+    </div>
+    <div class="banner">
+        <p>Southend Tech is a thriving community of IT professionals, businesses and tech enthusiasts. From meetups and hackathons to coding workshops and industry networking events, we bring people together across Southend, Basildon, Chelmsford and online to share ideas, collaborate and innovate.
+            <br>
+            We are currently meeting regularly in Southend, Chelmsford, Basildon and online for monthly Tech Meetups in 2026. Regular events, ad hoc events, our social media pages and previous events and activities are listed below.
+        </p>
+    </div>
+    <div class="banner">
+        <h2>Events</h2>
+        <ul>
+            <% next_events.forEach(event => { %>
+            <li>
+                <div class="events_container">
+                    <h3><%= event.name %></h3>
+                    <p><i class="fa-regular fa-calendar"></i><%= event.readable_date %></p>
+                    <p><i class="fa-solid fa-location-dot"></i><%= event.location %></p>
+                    <p><i class="fa-solid fa-circle-info"></i><%= event.description %></p>
+                </div>
+            </li>
+            <% }); %>
+        </ul>
+    </div>
+    <script defer src="/public/script.js"></script>
+</body>
+</html>

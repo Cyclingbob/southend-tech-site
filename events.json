@@ -1,0 +1,54 @@
+[
+    {
+        "name": "Chelmsford Tech Meetup (over 18s)",
+        "location": "Patch Chelmsford, Grays Yard.",
+        "description": "Talks, networking and more.\nCollaborate, share knowledge, work on projects and help one another.",
+        "timing": {
+            "reccurring": true,
+            "every": "month",
+            "day": "Thursday",
+            "week_nos": "1",
+            "start_time": "1900",
+            "end_time": "2200"
+        }
+    },
+    {
+        "name": "Southend Tech Meetup (over 18s)",
+        "location": "The Board Game Hut, just off Southend High Street (£6 on entry to the shop)",
+        "description": "Work on tech projects, software, hardware, AI, Raspberry Pi, electronics, robotics, virtual reality and more.\nCollaborate, share knowledge and help one another.",
+        "timing": {
+            "reccurring": true,
+            "every": "month",
+            "day": "Thursday",
+            "week_nos": "3",
+            "start_time": "1900",
+            "end_time": "2200"
+        }
+    },
+    {
+        "name": "Southend Coding Meetup - online (over 18s)",
+        "location": "Zoom",
+        "description": "Join us online for tech discussions, coding help, career advice and planning local events. https://us06web.zoom.us/j/81990702896?pwd=64SEMVGSzyUx9oYebnJyCwwVCEiGF7.1",
+        "timing": {
+            "reccurring": true,
+            "every": "week",
+            "day": "Monday",
+            "week_nos": "3",
+            "start_time": "1930",
+            "end_time": "2100"
+        }
+    },
+    {
+        "name": "Basildon Tech Meetup (over 18s)",
+        "location": "Orletto Lounge (normally upstairs), 2 East Square, SS14 1HS",
+        "description": "Social meetup for people working or interested in technology.",
+        "timing": {
+            "reccurring": true,
+            "every": "month",
+            "day": "Sunday",
+            "week_nos": "3",
+            "start_time": "1700",
+            "end_time": "1900"
+        }
+    }
+]
