@@ -113,7 +113,12 @@ function getNextEvents(file){
             if(event.timing.every === "month"){
                 eventDate = getNthWeekdayOfMonth(year, month, weekday, weekNo);
             } else {
-                eventDate = getNextWeekday(new Date(), weekNo);
+                eventDate = getNextWeekday(new Date(), weekday);
+                let newDate = new Date(eventDate);
+                newDate.setHours(event.timing.start_time.slice(0, 2), event.timing.start_time.slice(2, 4), 0, 0);
+                if(newDate.getTime() < eventDate.getTime()){
+                    eventDate = getNextWeekday(new Date(eventDate.getTime() + 24 * 60 * 60 * 1000), weekday);
+                }
             }
 
             // If this month's event already passed, move to next month

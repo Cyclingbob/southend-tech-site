@@ -33,7 +33,7 @@
             "reccurring": true,
             "every": "week",
             "day": "Monday",
-            "week_nos": "3",
+            "week_nos": "",
             "start_time": "1930",
             "end_time": "2100"
         }
