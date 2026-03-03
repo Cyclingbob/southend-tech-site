@@ -38,7 +38,11 @@
             <li>
                 <div class="events_container">
                     <h3><%= event.name %></h3>
-                    <p><i class="fa-regular fa-calendar"></i><%= event.readable_date %></p>
+                    <p><i class="fa-regular fa-calendar"></i><%= event.readable_date %>
+                        <% if(event.reccuring_readable) { %>
+                            <br><i class="fa-solid fa-repeat"></i><%= event.reccuring_readable %>
+                        <% } %>
+                    </p>
                     <p><i class="fa-solid fa-location-dot"></i><%= event.location %></p>
                     <p><i class="fa-solid fa-circle-info"></i><%= event.description %></p>
                 </div>

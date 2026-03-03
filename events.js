@@ -137,13 +137,23 @@ function getNextEvents(file){
             const startHour = parseInt(event.timing.start_time.slice(0, 2));
             const startMinute = parseInt(event.timing.start_time.slice(2, 4));
 
+            let reccuring_readable = "";
+            if(event.timing.reccurring){
+                if(event.timing.every === "week"){
+                    reccuring_readable = `Every ${event.timing.day}`;
+                } else if(event.timing.every === "month"){
+                    reccuring_readable = `Every ${event.timing.week_nos}${["th", "st", "nd", "rd"][event.timing.week_nos] || "th"} ${event.timing.day} of the month`;
+                }
+            }
+
             eventDate.setHours(startHour, startMinute, 0, 0);
             events.push({
                 name: event.name,
                 location: event.location,
                 description: event.description,
                 nextEvent: eventDate,
-                readable_date: formatUkDate(eventDate)
+                readable_date: formatUkDate(eventDate),
+                reccuring_readable
             });
         }
     }
